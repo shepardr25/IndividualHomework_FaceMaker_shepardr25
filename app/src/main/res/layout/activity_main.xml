@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="horizontal">
 
-    <com.example.individualhomework_facemaker_shepardr25.Face
+    <com.example.individualhomework_facemaker_shepardr25.DrawFace
         android:id="@+id/surfaceView"
         android:layout_width="0dp"
         android:layout_height="match_parent"
@@ -35,19 +35,12 @@
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/rednum"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1" />
-
             <SeekBar
                 android:id="@+id/rseekbar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:max="255"
-                android:progress="0" />
+                android:max="255" />
 
         </LinearLayout>
 
