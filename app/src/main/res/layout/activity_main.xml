@@ -4,27 +4,27 @@
     android:layout_height="match_parent"
     android:orientation="horizontal">
 
-    <SurfaceView
+    <com.example.individualhomework_facemaker_shepardr25.Face
         android:id="@+id/surfaceView"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="4" />
 
     <LinearLayout
-        android:id="@+id/togglesCol"
+        android:id="@+id/togglescol"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_weight="1">
 
         <LinearLayout
-            android:id="@+id/redSeekLay"
+            android:id="@+id/redseeklay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/redSeekTitle"
+                android:id="@+id/redseektitle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -35,8 +35,14 @@
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
+            <TextView
+                android:id="@+id/rednum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1" />
+
             <SeekBar
-                android:id="@+id/redSeekBar"
+                android:id="@+id/rseekbar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
@@ -46,13 +52,13 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/greenSeekLay"
+            android:id="@+id/greenseeklay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/greenSeekTitle"
+                android:id="@+id/greenseektitle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -62,8 +68,14 @@
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
+            <TextView
+                android:id="@+id/greennum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1" />
+
             <SeekBar
-                android:id="@+id/greenSeekBar"
+                android:id="@+id/gseekbar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
@@ -72,13 +84,13 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/blueSeekLay"
+            android:id="@+id/blueseeklay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/blueSeekTitle"
+                android:id="@+id/blueseektitle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -88,8 +100,14 @@
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
+            <TextView
+                android:id="@+id/bluenum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1" />
+
             <SeekBar
-                android:id="@+id/blueSeekBar"
+                android:id="@+id/bseekbar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
@@ -98,7 +116,7 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/hairSpinnerTitle"
+            android:id="@+id/hairspintitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Choose a Hair Style:"
@@ -106,13 +124,13 @@
             android:textStyle="bold" />
 
         <Spinner
-            android:id="@+id/hairSpinner"
+            android:id="@+id/hairspinner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:spinnerMode="dropdown" />
 
         <TextView
-            android:id="@+id/radioButtonTitle"
+            android:id="@+id/radbuttontitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Choose Between:"
@@ -120,32 +138,32 @@
             android:textStyle="bold" />
 
         <RadioGroup
-            android:id="@+id/radioGroup"
+            android:id="@+id/radgroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <RadioButton
-                android:id="@+id/radioButtonHair"
+                android:id="@+id/radbuthair"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Hair" />
 
             <RadioButton
-                android:id="@+id/radioButtonEyes"
+                android:id="@+id/radbuteyes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Eyes" />
 
             <RadioButton
-                android:id="@+id/radioButtonSkin"
+                android:id="@+id/radbutskin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Skin" />
         </RadioGroup>
 
         <Button
-            android:id="@+id/ranFaceButton"
+            android:id="@+id/ranbutton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Random Face" />
