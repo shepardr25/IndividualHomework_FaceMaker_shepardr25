@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="hairarray">
+        <item>Bald</item>
         <item>Lines</item>
         <item>Mowhawk</item>
-        <item>Bangs</item>
-        <item>Bald</item>
+        <item>Ugly Bangs</item>
     </string-array>
 </resources>
