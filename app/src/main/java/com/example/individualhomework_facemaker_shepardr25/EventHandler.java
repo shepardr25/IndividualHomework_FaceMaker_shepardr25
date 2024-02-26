@@ -95,19 +95,19 @@ public class EventHandler implements View.OnClickListener, View.OnTouchListener,
 
     public void updateColor(){
         if(face.selected == R.id.radbuthair) {
-            this.redTextView.setText(face.hRed);
-            this.greenTextView.setText(face.hGreen);
-            this.blueTextView.setText(face.hBlue);
+            this.redTextView.setText("" + face.hRed);
+            this.greenTextView.setText("" + face.hGreen);
+            this.blueTextView.setText("" + face.hBlue);
 
         } else if(face.selected == R.id.radbutskin){
-            this.redTextView.setText(face.sRed);
-            this.greenTextView.setText(face.sGreen);
-            this.blueTextView.setText(face.sBlue);
+            this.redTextView.setText("" + face.sRed);
+            this.greenTextView.setText("" + face.sGreen);
+            this.blueTextView.setText("" + face.sBlue);
 
         } else if(face.selected == R.id.radbuteyes){
-            this.redTextView.setText(face.eRed);
-            this.greenTextView.setText(face.eGreen);
-            this.blueTextView.setText(face.eBlue);
+            this.redTextView.setText("" + face.eRed);
+            this.greenTextView.setText("" + face.eGreen);
+            this.blueTextView.setText("" + face.eBlue);
         }
     }
 
