@@ -61,12 +61,6 @@
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/greennum"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1" />
-
             <SeekBar
                 android:id="@+id/gseekbar"
                 android:layout_width="wrap_content"
@@ -92,12 +86,6 @@
                 android:textColor="#0000FF"
                 android:textSize="16sp"
                 android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/bluenum"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1" />
 
             <SeekBar
                 android:id="@+id/bseekbar"

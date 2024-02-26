@@ -50,6 +50,15 @@ public class EventHandler implements View.OnClickListener, View.OnTouchListener,
     }
 
     @Override
+    public boolean onTouch(View view, MotionEvent motionEvent) {
+        return false;
+    }
+
+    @Override
+    public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+        //Do Nothing
+    }
+    @Override
     public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
         rVal = R.id.rseekbar;
         gVal = R.id.gseekbar;
@@ -59,21 +68,24 @@ public class EventHandler implements View.OnClickListener, View.OnTouchListener,
             face.red = i;
             this.updateColor();
         }
+
         if(seekBar.getId() == gVal){
             face.green = i;
             this.updateColor();
         }
+
         if(seekBar.getId() == bVal){
             face.blue = i;
             this.updateColor();
         }
+
         int color = rgb(face.red, face.green, face.blue);
 
         if(face.selected == R.id.radbuthair) {
             face.setHairColor(color);
-            face.red = face.red;
-            face.green = face.green;
-            face.blue = face.blue;
+            face.hRed = face.red;
+            face.hGreen = face.green;
+            face.hBlue = face.blue;
             this.updateColor();
 
         } else if(face.selected == R.id.radbutskin){
@@ -123,10 +135,7 @@ public class EventHandler implements View.OnClickListener, View.OnTouchListener,
         face.setHairstyle(i);
         facePict.invalidate();
     }
-    @Override
-    public boolean onTouch(View view, MotionEvent motionEvent) {
-        return false;
-    }
+
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
         //Do Nothing
@@ -144,10 +153,6 @@ public class EventHandler implements View.OnClickListener, View.OnTouchListener,
     }
     @Override
     public void onStopTrackingTouch(SeekBar seekBar) {
-        //Do Nothing
-    }
-    @Override
-    public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
         //Do Nothing
     }
 }

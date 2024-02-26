@@ -19,6 +19,10 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
         SeekBar.OnSeekBarChangeListener, View.OnClickListener{
     private DrawFace billyBob;
     private Face face;
+    public Spinner hairSpinner;
+    public RadioButton radbuthair, radbutskin, radbuteyes;
+    public SeekBar rseekbar, gseekbar, bseekbar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,22 +36,23 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
         EventHandler event = new EventHandler(billyBob, this);
         event.updateColor();
 
-        //Initialize Seek Bars
-        SeekBar rseekbar = findViewById(R.id.rseekbar);
-        SeekBar gseekbar = findViewById(R.id.gseekbar);
-        SeekBar bseekbar = findViewById(R.id.bseekbar);
 
         //Initialize Radio Buttons
-        RadioButton radbuthair = findViewById(R.id.radbuthair);
-        RadioButton radbuteyes = findViewById(R.id.radbuteyes);
-        RadioButton radbutskin = findViewById(R.id.radbutskin);
+        radbuthair = findViewById(R.id.radbuthair);
+        radbuteyes = findViewById(R.id.radbuteyes);
+        radbutskin = findViewById(R.id.radbutskin);
+
+        //Initialize Seek Bars
+        rseekbar = findViewById(R.id.rseekbar);
+        gseekbar = findViewById(R.id.gseekbar);
+        bseekbar = findViewById(R.id.bseekbar);
 
         //Initialize Random Button
         Button ranbutton = findViewById(R.id.ranbutton);
 
         //Initialize Spinner for Hairstyle
         // Enables the four spinner options ("Lines", "Mowhawk", "Bangs", "Bald") for hairstyles
-        Spinner hairSpinner = findViewById(R.id.hairspinner);
+        hairSpinner = findViewById(R.id.hairspinner);
 
         //Seek Bar On Click Listener
         rseekbar.setOnClickListener(event);
@@ -85,7 +90,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
         //Do Nothing
     }
     @Override
-    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+    public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
         //Do Nothing
     }
     @Override
