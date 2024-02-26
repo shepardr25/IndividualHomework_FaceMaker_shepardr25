@@ -60,49 +60,26 @@ public class EventHandler implements View.OnClickListener, View.OnTouchListener,
     }
     @Override
     public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-        rVal = R.id.rseekbar;
-        gVal = R.id.gseekbar;
-        bVal = R.id.bseekbar;
-
-        if(seekBar.getId() == rVal) {
-            face.red = i;
-            this.updateColor();
+        if (b) {
+            int color = rgb(face.red, face.green, face.blue);
+            if (seekBar.getId() == R.id.rseekbar) {
+                face.red = i;
+            } else if (seekBar.getId() == R.id.gseekbar) {
+                face.green = i;
+            } else if (seekBar.getId() == R.id.bseekbar) {
+                face.blue = i;
+            }
+            if (face.selected == R.id.radbuthair) {
+                face.setHairColor(color);
+            } else if (face.selected == R.id.radbutskin) {
+                face.setSkinTone(color);
+            } else if (face.selected == R.id.radbuteyes) {
+                face.setEyeColor(color);
+            }
+            updateColor();
+            facePict.invalidate();
         }
 
-        if(seekBar.getId() == gVal){
-            face.green = i;
-            this.updateColor();
-        }
-
-        if(seekBar.getId() == bVal){
-            face.blue = i;
-            this.updateColor();
-        }
-
-        int color = rgb(face.red, face.green, face.blue);
-
-        if(face.selected == R.id.radbuthair) {
-            face.setHairColor(color);
-            face.hRed = face.red;
-            face.hGreen = face.green;
-            face.hBlue = face.blue;
-            this.updateColor();
-
-        } else if(face.selected == R.id.radbutskin){
-            face.setSkinTone(color);
-            face.sRed = face.red;
-            face.sGreen = face.green;
-            face.sBlue = face.blue;
-            this.updateColor();
-
-        } else if(face.selected == R.id.radbuteyes){
-            face.setEyeColor(color);
-            face.eRed = face.red;
-            face.eGreen = face.green;
-            face.eBlue = face.blue;
-            this.updateColor();
-        }
-        facePict.invalidate();
     }
 
     public void updateColor(){

@@ -33,9 +33,8 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
         billyBob = findViewById(R.id.surfaceView);
         face = billyBob.getFace();
 
-        EventHandler event = new EventHandler(billyBob, this);
-        event.updateColor();
-
+        EventHandler eventHandler = new EventHandler(billyBob, this);
+        eventHandler.updateColor();
 
         //Initialize Radio Buttons
         radbuthair = findViewById(R.id.radbuthair);
@@ -51,23 +50,19 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
         Button ranbutton = findViewById(R.id.ranbutton);
 
         //Initialize Spinner for Hairstyle
-        // Enables the four spinner options ("Lines", "Mowhawk", "Bangs", "Bald") for hairstyles
         hairSpinner = findViewById(R.id.hairspinner);
 
-        //Seek Bar On Click Listener
-        rseekbar.setOnClickListener(event);
-        gseekbar.setOnClickListener(event);
-        bseekbar.setOnClickListener(event);
+        // Set event listeners
+        rseekbar.setOnSeekBarChangeListener(eventHandler);
+        gseekbar.setOnSeekBarChangeListener(eventHandler);
+        bseekbar.setOnSeekBarChangeListener(eventHandler);
+        radbuthair.setOnClickListener(eventHandler);
+        radbuteyes.setOnClickListener(eventHandler);
+        radbutskin.setOnClickListener(eventHandler);
+        ranbutton.setOnClickListener(eventHandler);
+        hairSpinner.setOnItemSelectedListener(eventHandler);
 
-        //Radio Button  On Click Listener
-        radbuthair.setOnClickListener(event);
-        radbuteyes.setOnClickListener(event);
-        radbutskin.setOnClickListener(event);
-
-        //Random Button  On Click Listener
-        ranbutton.setOnClickListener(event);
-
-        //Spinner
+        // Set adapter for the hairSpinner
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
                 this,
                 R.array.hairarray,
@@ -75,7 +70,6 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         hairSpinner.setAdapter(adapter);
-        hairSpinner.setOnItemSelectedListener(event);
     }
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
